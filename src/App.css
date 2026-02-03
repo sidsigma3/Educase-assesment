@@ -1,38 +1,344 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.app-wrapper{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:white
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.mobile-container{
+  width:375px;            
+  height:100vh;            
+  background:#F7F8F9;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  position:relative;
+  font-family: 'Rubik', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.homePage-ctn{
+  height: 100%;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.homePage-ctn h4{
+    margin: 5px 0;
+    height: 33px;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #1D2226;
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+
+ .homePage-ctn text{
+    margin: 5px 0;
+    width: 272px;
+    height: 48px;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #1D2226;
+    opacity: 0.6;
+  }
+
+  .homePage-ctn .btn-ctn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .homePage-ctn .btn-ctn .btn-create{
+    width: 335px;
+    height: 46px;
+    background-color: #6C25FF;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .homePage-ctn .btn-ctn .btn-register{
+    width: 335px;
+    height: 46px;
+    border: none;
+    border-radius: 6px;
+    background: #6C25FF4B;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+
+  .loginPage-ctn{
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+  .loginPage-ctn h4{
+    margin: 5px 0;
+    width: 75%;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #1D2226;
+    opacity: 1;
+  }
+
+  .loginPage-ctn text{
+    margin: 5px 0;
+    width: 272px;
+    height: 48px;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #1D2226;
+    opacity: 0.6;
+  }
+
+
+  .loginPage-ctn .form-ctn{
+    margin-top:15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .loginPage-ctn .form-ctn .input-ctn{
+    position: relative;
+  }
+
+  .loginPage-ctn .form-ctn input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #CBCBCB;
+  }
+
+  .loginPage-ctn .form-ctn input::placeholder{
+    font-size: 14px;
+    color: #919191;
+    font-size: 14px;
+  }
+
+  .loginPage-ctn .form-ctn input:focus{
+    outline:none;
+    border: 2px solid #6C25FF;
+  }
+
+  .loginPage-ctn .form-ctn label{
+    font-size: 14px;
+    font-weight: 550;
+    font-size: 13px;
+    color: #6C25FF;
+    text-align: left;
+  }
+
+
+  .loginPage-ctn .btn-login{
+    width: 100%;
+    border: none;
+    height: 46px;
+    background-color: #CBCBCB;
+    border-radius: 6px;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    font-size:16px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+
+
+
+  .createAccountPage-ctn{
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+  .createAccountPage-ctn
+  h4{
+    margin: 5px 0;
+    width: 65%;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #1D2226;
+    opacity: 1;
+  }
+
+
+  .createAccountPage-ctn text{
+    margin: 5px 0;
+    width: 272px;
+    height: 48px;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #1D2226;
+    opacity: 0.6;
+  }
+
+
+  .createAccountPage-ctn .form-ctn{
+    margin-top:25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  } 
+
+  .createAccountPage-ctn .form-ctn .input-ctn{
+    position: relative;
+  }
+
+  .createAccountPage-ctn .form-ctn input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #CBCBCB;
+  }
+
+  .createAccountPage-ctn .form-ctn input::placeholder{
+    font-size: 14px;
+    color: #919191;
+    font-size: 14px;
+  }
+
+  .createAccountPage-ctn .form-ctn input:focus{
+    outline:none;
+    border: 2px solid #6C25FF;
+  }
+
+  .createAccountPage-ctn .form-ctn label{
+    font-size: 14px;
+    font-weight: 550;
+    font-size: 13px;
+    color: #6C25FF;
+    text-align: left;
+  } 
+  .createAccountPage-ctn .btn-createAccount{
+    width: 100%;
+    border: none;
+    height: 46px;
+    background-color: #6C25FF;
+    border-radius: 6px;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    font-size:16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .createAccountPage-ctn .radio-ctn label{
+    color: black;
+    font-weight: 500;
+  }
+  
+  .createAccountPage-ctn .radio-ctn .radioForm-ctn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .createAccountPage-ctn .radio-ctn .radioForm-ctn input{
+    width:16px;
+    height:16px;
+  }
+
+  .createAccountPage-ctn .radio-ctn .radioForm-ctn input[type="radio"]:checked {
+  accent-color: #6C25FF;
+  }
+
+  .createAccountPage-ctn .red-dot{
+    color: #DD4A3D;
+  }
+
+
+
+  .account-page-ctn{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .account-page-ctn .top{
+    background-color: white;
+    height: 70px;
+    display: flex;
+  }
+
+  .account-page-ctn .top text{
+    text-align: left;
+    font-size:18px;
+    color: #1D2226;
+    text-transform: capitalize;
+    opacity: 1;
+    margin:25px 20px;
+  }
+
+
+  .account-page-ctn .info-ctn{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px dashed #CBCBCB;
+  }
+
+
+  .account-page-ctn .info-ctn text{
+    font-size: 14px;
+    color: #1D2226;
+    opacity: 0.9;
+    text-align: left;
+  }
+
+@media(max-width: 480px){
+  .mobile-container{
+    width:100%;
+    height:100vh;
+    border-radius:0;
   }
 }
